@@ -1,12 +1,17 @@
-import React from 'react'
-import { NavBar } from '../utils'
+import React from "react";
+import { HeroSection, NavBar } from "../utils";
 
 const Home = () => {
   return (
-    <div className='bg-white/30 backdrop-blur-lg'>
-      <NavBar/>
+    <div>
+      <div className="bg-white/30 backdrop-blur-lg">
+        <NavBar />
+      </div>
+      <div>
+        <HeroSection/>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
