@@ -10,6 +10,7 @@ const Navbar = () => {
   }
   return (
     <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4">
+      
       <div className="logo relative flex items-center">
         <img src={Logo} alt="Logo" className="w-16" />
         <p className="text-animate font-mono uppercase text-xl">
@@ -52,7 +53,8 @@ const Navbar = () => {
           />
         </svg>
         {open && (
-          <div className=" absolute right-0 top-14 p-4 bg-Teal w-full">
+
+          <div className=" absolute right-0 top-14 p-4  bg-white/30 backdrop-blur-md w-full">
             <div className="my-2">
               {NavigationLinks.map((nav, i) => (
                 <div
@@ -73,8 +75,10 @@ const Navbar = () => {
               <button className="btn-secondary text-xl py-2">Sign Up</button>
             </div>
           </div>
+
         )}
       </div>
+
     </div>
   );
 };

@@ -4,10 +4,10 @@ import { HeroSection, NavBar } from "../utils";
 const Home = () => {
   return (
     <div>
-      <div className="bg-white/30 backdrop-blur-lg">
+      <div className="border-b sticky top-0 z-10">
         <NavBar />
       </div>
-      <div>
+      <div className="z-0">
         <HeroSection/>
       </div>
     </div>

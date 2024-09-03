@@ -5,21 +5,25 @@ const HeroSection = () => {
   const handelSignUp = () => {};
   const handelScrollDown = () => {};
   return (
-    <div className="grid grid-cols-5 grid-rows-7 gap-2 max-w-screen-xl mx-auto px-4 py-2">
-      <div className="col-span-3 row-span-7 headline relative ">
+    <>
+    <div className="hero-section z-0">
+      <div className="headline">
         <img
           src={heroImageFirst}
           alt="hero-img-connect"
-          className=" mix-blend-overlay rounded-lg"
+          className=" mix-blend-overlay rounded-lg object-cover w-full"
         />
-        <div className=" absolute bottom-0 bg-white/30 backdrop-blur-md flex items-center text-Beige">
-          <p className="px-2 text-md">
+        <div className=" absolute lg:h-fit h-full lg:justify-normal justify-between bottom-0 
+        w-full flex items-center
+         text-Beige lg:flex-row flex-col">
+          <p className="px-2 text-md w-full bg-white/30 backdrop-blur-sm">
             Empower your career with SkillHub—showcase your skills, find job
             matches, and secure your future with a verified portfolio.
           </p>
           <button
             onClick={handelSignUp}
-            className="border py-3 px-2 btn-primary rounded-none bg-transparent w-1/3"
+            className="border py-3 px-2 btn-primary border-Blue rounded-none bg-white/30 
+            backdrop-blur-sm lg:w-1/3 w-full"
           >
             Get Start Now
           </button>
@@ -27,7 +31,7 @@ const HeroSection = () => {
       </div>
       <div className="sub-headline">
         <div className="px-4 py-2">
-          <p className="w-full h-full text-xl text-Beige font-bold text-center">
+          <p className="w-full h-full text-sm lg:text-xl text-Beige font-bold text-center ">
             Join a global developer community and unlock worldwide
             opportunities.
           </p>
@@ -48,7 +52,7 @@ const HeroSection = () => {
       <AutoScroll direction={"right-left"}/>
       </div>
       </div>
-      <div className="col-span-2 col-start-4 row-start-7 explore-btn p-4">
+      <div className="explore-btn">
         <button
           onClick={handelScrollDown}
           className="w-full btn-primary py-2 h-full"
@@ -58,6 +62,7 @@ const HeroSection = () => {
         {/* Scrolls down to the features or job listings section */}
       </div>
     </div>
+    </>
   );
 };
 
