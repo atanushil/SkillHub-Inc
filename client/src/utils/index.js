@@ -18,6 +18,7 @@ import AnalyticsIcon from "/assets/AnalyticsIcon.jpg";
 import IntegrationIcon from "/assets/IntegrationIcon.jpg";
 import HowItWorks from "../components/common/HowItWorks";
 import Pricing from "../components/common/Pricing";
+import AboutUs from "../components/common/AboutUs";
 export {
   Logo,
   heroImageFirst,
@@ -38,4 +39,5 @@ export {
   FeaturesSection,
   HowItWorks,
   Pricing,
+  AboutUs,
 };
