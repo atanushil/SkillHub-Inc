@@ -19,10 +19,13 @@ import IntegrationIcon from "/assets/IntegrationIcon.jpg";
 import HowItWorks from "../components/common/HowItWorks";
 import Pricing from "../components/common/Pricing";
 import AboutUs from "../components/common/AboutUs";
+import ContactUs from "../components/common/ContactUs";
+import heroImage1 from "/assets/heroImage1.png"
+import Banner from "/assets/techBanner.jpg"
 export {
   Logo,
   heroImageFirst,
-  
+  heroImage1,
   AIDrivenIcon,
   PortfolioIcon,
   DecentralizedIcon,
@@ -32,6 +35,7 @@ export {
   CommunityIcon,
   IntegrationIcon,
   AnalyticsIcon,
+  Banner,
   Home,
   NavBar,
   HeroSection,
@@ -40,4 +44,5 @@ export {
   HowItWorks,
   Pricing,
   AboutUs,
+  ContactUs
 };
