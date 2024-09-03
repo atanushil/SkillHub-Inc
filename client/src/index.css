@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer components {
+
   /* Navbar css */
   .text-animate {
     @apply font-sans overflow-hidden bg-no-repeat;
@@ -19,7 +20,7 @@
   }
 
   .btn-primary {
-    @apply bg-inherit border px-4 rounded-lg transition-colors duration-300 ease-in-out hover:border-transparent hover:bg-slate hover:delay-75 text-Teal hover:text-white;
+    @apply bg-inherit border px-4 rounded-lg transition-colors duration-300 ease-in-out hover:border-Purple hover:bg-slate hover:delay-75 text-Teal hover:text-white;
   }
 
   .btn-secondary {
@@ -27,23 +28,7 @@
   }
 
   /* Hero Section */
-  .hero-section{
-    @apply flex flex-col lg:grid grid-cols-5 grid-rows-7 gap-2 max-w-screen-xl  mx-auto px-4 py-2  max-h-fit;
-  }
-  .headline{
-    @apply col-span-3 row-span-7  relative flex items-center justify-center;
-  }
-  .sub-headline{
-    @apply p-4 col-span-2 row-span-4 col-start-4  rounded-lg bg-white/30 backdrop-blur-lg flex flex-col gap-2
-  }
 
-  .features {
-    @apply col-span-2 row-span-2 col-start-4 row-start-5 
-    flex flex-col gap-1 bg-white/30 backdrop-blur-sm rounded-lg;
-  }
-  .explore-btn{
-    @apply col-span-2 col-start-4 row-start-7  p-4;
-  }
 
   /* Auto scroll */
   .scroll-container {

@@ -22,7 +22,7 @@ const Navbar = () => {
           <div
             className={`${
               selected === nav
-                ? "text-Blue border-b-2 cursor-pointer"
+                ? "text-white border-b-2 cursor-pointer"
                 : "nav-link mx-2 border-b-animation hover:text-animate"
             } caret-transparent `}
             onClick={() => setSelected(nav)}

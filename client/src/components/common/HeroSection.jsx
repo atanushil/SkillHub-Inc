@@ -1,68 +1,55 @@
 import React from "react";
-import { AutoScroll, heroImageFirst, heroImageSecond } from "../../utils";
+import { heroImageFirst } from "../../utils"; // Replace with your actual image path
 
 const HeroSection = () => {
-  const handelSignUp = () => {};
-  const handelScrollDown = () => {};
+  const handleSignUp = () => {
+    // Redirect to the sign-up page or handle sign-up logic
+  };
+
+  const handleScrollDown = () => {
+    // Scroll to the features section
+    const featuresSection = document.getElementById("features-section");
+    featuresSection.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <>
-    <div className="hero-section z-0">
-      <div className="headline">
-        <img
-          src={heroImageFirst}
-          alt="hero-img-connect"
-          className=" mix-blend-overlay rounded-lg object-cover w-full"
-        />
-        <div className=" absolute lg:h-fit h-full lg:justify-normal justify-between bottom-0 
-        w-full flex items-center
-         text-Beige lg:flex-row flex-col">
-          <p className="px-2 text-md w-full bg-white/30 backdrop-blur-sm">
-            Empower your career with SkillHub—showcase your skills, find job
-            matches, and secure your future with a verified portfolio.
+    <div className="hero-section max-w-screen-xl mx-auto px-4  text-white py-20">
+      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
+        {/* Headline and Subheadline */}
+        <div className="text-center lg:text-left lg:max-w-lg relative xl:bottom-10">
+          <h1 className="text-4xl lg:text-6xl lg:leading-tight 2xl:leading-normal  font-bold mb-4">
+            Empower Your Career with a Verified Portfolio.
+          </h1>
+          <p className="text-lg lg:text-2xl mb-8">
+            Showcase your skills, find job matches, and secure your future with
+            SkillHub.
           </p>
-          <button
-            onClick={handelSignUp}
-            className="border py-3 px-2 btn-primary border-Blue rounded-none bg-white/30 
-            backdrop-blur-sm lg:w-1/3 w-full"
-          >
-            Get Start Now
-          </button>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4">
+            <button
+              onClick={handleSignUp}
+              className="btn-primary text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300"
+            >
+              Get Start Now
+            </button>
+            <button
+              onClick={handleScrollDown}
+              className="btn-secondary text-blue-600  hover:text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300"
+            >
+              Learn More
+            </button>
+          </div>
         </div>
-      </div>
-      <div className="sub-headline">
-        <div className="px-4 py-2">
-          <p className="w-full h-full text-sm lg:text-xl text-Beige font-bold text-center ">
-            Join a global developer community and unlock worldwide
-            opportunities.
-          </p>
-        </div>
-        <div className="h-full bg-white">
+        {/* Hero Image/Illustration */}
+        <div className="mt-10 lg:mt-0 lg:ml-10">
           <img
-            src={heroImageSecond}
-            alt="hero-img-community"
-            className="h-full object-fit mix-blend-multiply"
+            src={heroImageFirst} 
+            alt="Hero Illustration"
+            className="w-full h-auto rounded-lg shadow-lg"
           />
         </div>
       </div>
-
-      <div className="features">
-      <p className="text-xl text-white p-1">Top Client Achievement</p>
-      <div className="w-full px-2">
-      <AutoScroll direction={"left-right"} /> 
-      <AutoScroll direction={"right-left"}/>
-      </div>
-      </div>
-      <div className="explore-btn">
-        <button
-          onClick={handelScrollDown}
-          className="w-full btn-primary py-2 h-full"
-        >
-          Explore Opportunities
-        </button>
-        {/* Scrolls down to the features or job listings section */}
-      </div>
     </div>
-    </>
   );
 };
 
