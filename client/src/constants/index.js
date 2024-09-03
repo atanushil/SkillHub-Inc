@@ -1,11 +1,14 @@
+import { Home } from "../utils";
 
 
 export const NavigationLinks = [
-  "Home",
-  "Features",
-  "How It Works",
-  "Pricing",
-  "About",
-  "Contact",
+  {"Home":"hero-section"},
+  {"Features":"features-section"},
+  { "How It Works":"work-section"},
+  { "Pricing":"pricing-section"},
+  {"About":"about-section"},
+  {"Contact":"contant-section"},
 ];
+
+
 

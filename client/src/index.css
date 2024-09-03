@@ -24,7 +24,7 @@
   }
 
   .btn-secondary {
-    @apply text-white font-sans px-4 py-1 rounded-lg border border-transparent bg-slate transition-colors duration-300 ease-in-out hover:border-Purple;
+    @apply text-stone-400 hover:text-white font-sans px-4 py-1 rounded-lg border border-transparent bg-slate transition-colors duration-300 ease-in-out hover:border-Purple;
   }
 
   /* Hero Section */

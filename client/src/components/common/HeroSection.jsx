@@ -1,19 +1,18 @@
 import React from "react";
 import { heroImageFirst } from "../../utils"; // Replace with your actual image path
 
-const HeroSection = () => {
+const HeroSection = ({}) => {
   const handleSignUp = () => {
     // Redirect to the sign-up page or handle sign-up logic
   };
 
   const handleScrollDown = () => {
-    // Scroll to the features section
     const featuresSection = document.getElementById("features-section");
     featuresSection.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <div className="hero-section max-w-screen-xl mx-auto px-4  text-white py-20">
+    <div className="hero-section max-w-screen-xl mx-auto px-4  text-white py-20" id="hero-section">
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
         {/* Headline and Subheadline */}
         <div className="text-center lg:text-left lg:max-w-lg relative xl:bottom-10">
