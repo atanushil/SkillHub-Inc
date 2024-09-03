@@ -17,6 +17,7 @@ import CommunityIcon from "/assets/CommunityIcon.jpg";
 import AnalyticsIcon from "/assets/AnalyticsIcon.jpg";
 import IntegrationIcon from "/assets/IntegrationIcon.jpg";
 import HowItWorks from "../components/common/HowItWorks";
+import Pricing from "../components/common/Pricing";
 export {
   Logo,
   heroImageFirst,
@@ -36,4 +37,5 @@ export {
   AutoScroll,
   FeaturesSection,
   HowItWorks,
+  Pricing,
 };

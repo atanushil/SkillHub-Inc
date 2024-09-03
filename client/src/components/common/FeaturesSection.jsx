@@ -137,7 +137,7 @@ const SkillHubFeaturesSection = () => {
             {features.map((feature, i) => (
               <li
                 key={i}
-                className={`cursor-pointer md:p-2 px-4 py-2 caret-transparent transition-colors border-b duration-300 w-full whitespace-nowrap ${
+                className={`cursor-pointer md:p-2 px-4 py-2 caret-transparent transition-colors md:border-b border-r duration-300 w-full whitespace-nowrap md:whitespace-normal ${
                   selectedFeature.title === feature.title
                     ? "bg-[#0D1425]/50 backdrop-blur-sm text-white"
                     : "text-slate hover:bg-blue-100 bg-white/30"
@@ -152,10 +152,10 @@ const SkillHubFeaturesSection = () => {
       </div>
 
       <div className="text-center mt-8">
-        <h3 className="text-3xl font-bold mb-4 text-stone-400 caret-transparent">
+        <h3 className="text-3xl font-bold mb-8 text-stone-400 caret-transparent">
           Ready to take your career to the next level?
         </h3>
-        <a href="/sign-up" className="btn-secondary py-3 px-8">
+        <a href="/sign-up" className="btn-secondary py-3 px-8 ">
           Sign Up Now
         </a>
       </div>
