@@ -1,5 +1,5 @@
 import React from "react";
-import { FeaturesSection, HeroSection, NavBar } from "../utils";
+import { FeaturesSection, HeroSection, HowItWorks, NavBar } from "../utils";
 
 const Home = () => {
   return (
@@ -12,6 +12,9 @@ const Home = () => {
       </div>
       <div className="z-0">
         <FeaturesSection/>
+      </div>
+      <div>
+        <HowItWorks/>
       </div>
     </div>
   );

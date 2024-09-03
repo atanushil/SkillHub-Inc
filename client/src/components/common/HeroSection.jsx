@@ -12,7 +12,8 @@ const HeroSection = ({}) => {
   };
 
   return (
-    <div className="hero-section max-w-screen-xl mx-auto px-4  text-white py-20" id="hero-section">
+   
+    <div className="hero-section max-w-screen-xl mx-auto px-4  text-white py-24 " id="hero-section">
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
         {/* Headline and Subheadline */}
         <div className="text-center lg:text-left lg:max-w-lg relative xl:bottom-10">

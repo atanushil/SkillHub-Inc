@@ -90,7 +90,7 @@ const SkillHubFeaturesSection = () => {
   const [selectedFeature, setSelectedFeature] = useState(features[0]);
 
   return (
-    <section className="py-6 px-6 max-w-screen-xl mx-auto" id="features-section">
+    <section className="py-16 px-6 max-w-screen-xl mx-auto" id="features-section">
       <div className="text-center mb-6">
         <h2 className="text-4xl text-white font-bold mb-4 caret-transparent">
           Why Choose SkillHub?

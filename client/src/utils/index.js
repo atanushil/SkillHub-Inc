@@ -16,7 +16,7 @@ import BlockchainIcon from "/assets/BlockchainIcon.jpg";
 import CommunityIcon from "/assets/CommunityIcon.jpg";
 import AnalyticsIcon from "/assets/AnalyticsIcon.jpg";
 import IntegrationIcon from "/assets/IntegrationIcon.jpg";
-
+import HowItWorks from "../components/common/HowItWorks";
 export {
   Logo,
   heroImageFirst,
@@ -35,4 +35,5 @@ export {
   HeroSection,
   AutoScroll,
   FeaturesSection,
+  HowItWorks,
 };

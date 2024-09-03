@@ -37,7 +37,7 @@ const Navbar = () => {
           return (
             <li
               key={i}
-              className={`cursor-pointer ${
+              className={`cursor-pointer caret-transparent ${
                 selected === nav
                   ? "text-white border-b-2 border-Blue"
                   : "nav-link border-b-animation hover:text-animate"
