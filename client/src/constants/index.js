@@ -7,7 +7,7 @@ export const NavigationLinks = [
   { "How It Works":"work-section"},
   { "Pricing":"pricing-section"},
   {"About":"about-section"},
-  {"Contact":"contant-section"},
+  {"Contact":"contact-section"},
 ];
 
 
