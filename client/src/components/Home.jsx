@@ -1,5 +1,5 @@
 import React from "react";
-import { AboutUs, ContactUs, FeaturesSection, HeroSection, HowItWorks, NavBar, Pricing } from "../utils";
+import { AboutUs, ContactUs, FeaturesSection, Footer, HeroSection, HowItWorks, NavBar, Pricing } from "../utils";
 
 const Home = () => {
   return (
@@ -24,6 +24,9 @@ const Home = () => {
       </div>
       <div>
         <ContactUs/>
+      </div>
+      <div className="bg-white">
+        <Footer/>
       </div>
     </div>
   );

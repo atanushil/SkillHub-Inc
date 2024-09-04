@@ -6,31 +6,30 @@ const ContactUs = () => {
     <div className="max-w-screen-xl py-16  px-8 mx-auto " id="contact-section">
       {/* Banner Section */}
       <div
-        className="h-32 flex items-center bg-cover"
+        className="sm:h-32 h-24 flex items-center bg-cover"
         style={{ backgroundImage: `url(${Banner})` }}
       >
-        <p className="text-6xl ml-5 text-white">Contact Us</p>
+        <p className="sm:text-6xl text-4xl ml-5 text-white">Contact Us</p>
       </div>
 
       {/* Details and Image Section */}
       <div className="grid grid-cols-3  group">
         {/* Details */}
-        <div className="lg:col-span-2 col-span-3  group-hover:drop-shadow-[0_2px_2px_rgba(199,87,224,0.8)] 
-            transition-transform duration-500 ease-in-out transform ">
+        <div className="lg:col-span-2 col-span-3   ">
           {/* Address Section */}
           <div className=" m-2 py-6 flex items-center border-b-2">
-            <p className="text-2xl text-white w-1/3">Address</p>
-            <p className="text-lg text-white w-2/3 text-center">
+            <p className="sm:text-4xl text-xl text-white w-1/3">Address</p>
+            <p className="sm:text-lg text-sm text-white w-2/3 text-start">
               Guskara, West Bengal, India 713128
             </p>
           </div>
 
           {/* Contact Details Section */}
           <div className=" m-2 py-6 flex items-center border-b-2">
-            <p className="text-2xl text-white whitespace-nowrap w-1/3">
+            <p className="sm:text-4xl text-xl text-white whitespace-nowrap w-1/3">
               Get in Touch
             </p>
-            <p className="text-lg text-white w-2/3 text-center md:flex-row flex flex-col">
+            <p className="sm:text-lg text-sm text-white w-2/3 text-center md:flex-row flex flex-col">
               <span className="mr-4">+91 9832118794</span>
               <span>atanushil358@gmail.com</span>
             </p>
@@ -38,15 +37,15 @@ const ContactUs = () => {
 
           {/* Hours of Operation Section */}
           <div className=" py-6 m-2 border-b-2  flex  items-center">
-            <p className="text-2xl text-white w-1/3 ">Hours</p>
-            <p className="text-md text-white  w-2/3 grid grid-cols-2 grid-rows-3 ">
+            <p className="sm:text-4xl text-xl text-white w-1/3 ">Hours</p>
+            <div className="sm:text-md text-sm text-white  w-2/3 grid grid-cols-2 grid-rows-3 ">
               <div>Mon - Fri</div>
               <div> 10:00 AM - 6:00 PM</div>
               <div>Sat</div>
               <div>10:00 AM - 1:00 PM</div>
               <div>Sun</div>
               <div> Closed</div>
-            </p>
+            </div>
           </div>
         </div>
 

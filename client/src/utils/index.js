@@ -3,25 +3,26 @@ import Logo from "/assets/Logo.png";
 import NavBar from "../components/common/NavBar";
 import HeroSection from "../components/common/HeroSection";
 import heroImageFirst from "/assets/hero-img-1.jpg";
-import AutoScroll from "../components/common/AutoScroll";
+
 import FeaturesSection from "../components/common/FeaturesSection";
 
-import AIDrivenIcon from "/assets/AIDrivenIcon.jpg";
-import PortfolioIcon from "/assets/PortfolioIcon.jpg";
+import AIDrivenIcon from "/assets/AIDrivenIcon.png";
+import PortfolioIcon from "/assets/PortfolioIcon.png";
 
-import DecentralizedIcon from "/assets/DecentralizedIcon.jpg";
-import ATSIcon from "/assets/ATSIcon.jpg";
-import JobMatchingIcon from "/assets/JobMatchingIcon.jpg";
-import BlockchainIcon from "/assets/BlockchainIcon.jpg";
-import CommunityIcon from "/assets/CommunityIcon.jpg";
-import AnalyticsIcon from "/assets/AnalyticsIcon.jpg";
-import IntegrationIcon from "/assets/IntegrationIcon.jpg";
+import DecentralizedIcon from "/assets/DecentralizedIcon.png";
+import ATSIcon from "/assets/ATSIcon.png";
+import JobMatchingIcon from "/assets/JobMatchingIcon.png";
+import BlockchainIcon from "/assets/BlockchainIcon.png";
+import CommunityIcon from "/assets/CommunityIcon.png";
+import AnalyticsIcon from "/assets/AnalyticsIcon.png";
+import IntegrationIcon from "/assets/IntegrationIcon.png";
 import HowItWorks from "../components/common/HowItWorks";
 import Pricing from "../components/common/Pricing";
 import AboutUs from "../components/common/AboutUs";
 import ContactUs from "../components/common/ContactUs";
 import heroImage1 from "/assets/heroImage1.png"
 import Banner from "/assets/techBanner.jpg"
+import Footer from "../components/common/Footer";
 export {
   Logo,
   heroImageFirst,
@@ -39,10 +40,10 @@ export {
   Home,
   NavBar,
   HeroSection,
-  AutoScroll,
   FeaturesSection,
   HowItWorks,
   Pricing,
   AboutUs,
-  ContactUs
+  ContactUs,
+  Footer
 };

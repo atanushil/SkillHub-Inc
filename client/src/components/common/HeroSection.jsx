@@ -20,7 +20,8 @@ const HeroSection = ({}) => {
           <h1 className="text-4xl lg:text-6xl lg:leading-tight 2xl:leading-normal  font-bold mb-4">
             Empower Your Career with a Verified Portfolio.
           </h1>
-          <p className="text-lg lg:text-2xl mb-8">
+          <p className="lg:text-3xl text-xl text-orange-400 mb-4">Trusted by 10,000+ developers.</p>
+          <p className="text-lg lg:text-xl mb-8 text-stone-400">
             Showcase your skills, find job matches, and secure your future with
             SkillHub.
           </p>

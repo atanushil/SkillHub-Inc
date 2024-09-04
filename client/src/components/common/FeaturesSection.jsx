@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AIDrivenIcon,
   PortfolioIcon,
@@ -9,9 +9,10 @@ import {
   CommunityIcon,
   IntegrationIcon,
   AnalyticsIcon,
-} from "../../utils"; // Adjust the import path according to your directory structure
+} from "../../utils"; 
+import { GrNext, GrPrevious } from "react-icons/gr";
 
-const SkillHubFeaturesSection = () => {
+const FeaturesSection = () => {
   const features = [
     {
       icon: PortfolioIcon,
@@ -87,10 +88,44 @@ const SkillHubFeaturesSection = () => {
     },
   ];
 
-  const [selectedFeature, setSelectedFeature] = useState(features[0]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 5000); 
+
+    return () => clearInterval(interval); 
+  }, []);
+
+  const handlePrev = () => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? features.length - 1 : prevIndex - 1
+      );
+      setIsTransitioning(false);
+    }, 500);
+  };
+
+  const handleNext = () => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === features.length - 1 ? 0 : prevIndex + 1
+      );
+      setIsTransitioning(false);
+    }, 500);
+  };
+
+  const { icon, title, description, cta } = features[currentIndex];
 
   return (
-    <section className="py-16 px-6 max-w-screen-xl mx-auto" id="features-section">
+    <section
+      className="py-16 px-6 max-w-screen-xl mx-auto"
+      id="features-section"
+    >
       <div className="text-center mb-6">
         <h2 className="text-4xl text-white font-bold mb-4 caret-transparent">
           Why Choose SkillHub?
@@ -101,53 +136,62 @@ const SkillHubFeaturesSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-6 w-full rounded-lg">
-        {/* Selected Feature Panel */}
-        <div className="md:col-span-4 bg-[#0D1425]/50 backdrop-blur-sm p-4">
-          <div className="grid gap-4">
-            <h3 className="text-2xl text-white font-semibold mb-4 caret-transparent">
-              {selectedFeature.title}
-            </h3>
-            <div className="flex justify-between items-center">
-              <img
-                src={selectedFeature.icon}
-                alt={selectedFeature.title}
-                className="w-1/3 object-contain h-full transform transition-transform duration-300 hover:scale-110"
-              />
-              <div className="p-4 flex flex-col justify-between h-full">
-                <p className="text-gray-400 text-2xl caret-transparent">
-                  {selectedFeature.description}
-                </p>
-                {selectedFeature.cta && (
-                  <a
-                    href={selectedFeature.link}
-                    className="text-blue-400 hover:text-blue-600 hover:underline font-semibold caret-transparent"
-                  >
-                    {selectedFeature.cta}
-                  </a>
-                )}
-              </div>
-            </div>
+      <div className="relative px-4 ">
+        <button
+          onClick={handlePrev}
+          className="absolute -left-4 top-1/2 transform -translate-y-1/2 z-20 overflow-hidden
+           border-r text-white p-6 rounded-full"
+        >
+          <GrPrevious className="relative left-3" />
+        </button>
+
+        <div
+          className={`sm:grid grid-cols-6 grid-rows-5 gap-4  feature  bg-white/20
+             transition duration-500 ease-in-out transform ${
+               isTransitioning ? "blur-sm opacity-50" : "opacity-100"
+             }`}
+        >
+          <div className="col-span-6 flex justify-center items-center ">
+            <p className="text-stone-200 sm:text-4xl uppercase whitespace-normal">
+              {title}
+            </p>
+          </div>
+          <div
+            className="col-span-2 row-span-4 row-start-2 sm:h-60 h-40 py-4 sm:py-0
+          flex items-center justify-center"
+          >
+            <img
+              src={icon}
+              alt={title}
+              className="object-contain sm:h-60 h-32 sm:mb-8
+              drop-shadow-[1px_3px_3px_rgba(199,92,224,0.8)] 
+            transition-transform duration-500 ease-in-out transform "
+          />
+          </div>
+          <div className="col-span-4 row-span-4 col-start-3 row-start-2  py-8 px-4 flex flex-col">
+            <span className="text-stone-300"> {description}</span>
+            <span className="text-orange-300 ">{cta}</span>
           </div>
         </div>
 
-        {/* Features List */}
-        <div className="md:col-span-2">
-          <ul className="md:block overflow-x-auto flex">
-            {features.map((feature, i) => (
-              <li
-                key={i}
-                className={`cursor-pointer md:p-2 px-4 py-2 caret-transparent transition-colors md:border-b border-r duration-300 w-full whitespace-nowrap md:whitespace-normal ${
-                  selectedFeature.title === feature.title
-                    ? "bg-[#0D1425]/50 backdrop-blur-sm text-white"
-                    : "text-slate hover:bg-blue-100 bg-white/30"
-                }`}
-                onClick={() => setSelectedFeature(feature)}
-              >
-                {feature.title}
-              </li>
-            ))}
-          </ul>
+        <button
+          onClick={handleNext}
+          className="absolute -right-4 top-1/2 transform -translate-y-1/2 overflow-hidden
+            text-white p-6 rounded-full border-l"
+        >
+          <GrNext className="relative right-3" />
+        </button>
+
+        {/* Dots Indicator */}
+        <div className="absolute -bottom-4 left-0 right-0 flex justify-center space-x-2">
+          {features.map((_, index) => (
+            <div
+              key={index}
+              className={`w-3 h-3 rounded-full ${
+                index === currentIndex ? "bg-white" : "bg-gray-500"
+              }`}
+            />
+          ))}
         </div>
       </div>
 
@@ -155,7 +199,7 @@ const SkillHubFeaturesSection = () => {
         <h3 className="text-3xl font-bold mb-8 text-stone-400 caret-transparent">
           Ready to take your career to the next level?
         </h3>
-        <a href="/sign-up" className="btn-secondary py-3 px-8 ">
+        <a href="/sign-up" className="btn-secondary py-3 px-8">
           Sign Up Now
         </a>
       </div>
@@ -163,4 +207,4 @@ const SkillHubFeaturesSection = () => {
   );
 };
 
-export default SkillHubFeaturesSection;
+export default FeaturesSection;

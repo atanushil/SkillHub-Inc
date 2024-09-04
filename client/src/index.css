@@ -16,7 +16,8 @@
   }
 
   .nav-link {
-    @apply cursor-pointer caret-transparent duration-300 transition-colors ease-in-out hover:delay-200 relative;
+    @apply cursor-pointer caret-transparent duration-300 drop-shadow-[1px_3px_3px_rgba(199,87,224,0.8)]
+     transition-colors ease-in-out hover:delay-200 relative;
   }
 
   .btn-primary {
