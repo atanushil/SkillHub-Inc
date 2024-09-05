@@ -9,8 +9,13 @@ import {
   CommunityIcon,
   IntegrationIcon,
   AnalyticsIcon,
-} from "../../utils"; 
+} from "../../utils";
 import { GrNext, GrPrevious } from "react-icons/gr";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const FeaturesSection = () => {
   const features = [
@@ -91,13 +96,62 @@ const FeaturesSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
+  useGSAP(() => {
+    // GSAP animation for main heading, subheading, and lower heading
+    gsap.fromTo(
+      '.heading, .subheading, .lower-heading',
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        stagger: 0.3,
+        ease: 'power4.out',
+        scrollTrigger: {
+          trigger: '#features-section',
+          start: 'left center',
+          toggleActions: 'play pause restart pause',
+        },
+      }
+    );
+
+    // ScrollTrigger animation for the features section
+    gsap.fromTo(
+      '.feature',
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: 'power4.out',
+        scrollTrigger: {
+          trigger: '#features-section',
+          start: 'left center',
+          toggleActions: 'play pause restart pause',
+        },
+      }
+    );
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 5000); 
+    }, 5000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, []);
+
+  // Animate feature change
+  useEffect(() => {
+    if (!isTransitioning) {
+      gsap.fromTo(
+        ".feature-title, .feature-desc, .feature-icon",
+        { opacity: 0, x: -50 },
+        { opacity: 1, x: 0, duration: 0.6, stagger: 0.2, ease: "power4.out" }
+      );
+    }
+  }, [currentIndex, isTransitioning]);
 
   const handlePrev = () => {
     setIsTransitioning(true);
@@ -119,24 +173,20 @@ const FeaturesSection = () => {
     }, 500);
   };
 
-  const { icon, title, description, cta ,link} = features[currentIndex];
+  const { icon, title, description, cta, link } = features[currentIndex];
 
   return (
-    <section
-      className="py-16 px-6 max-w-screen-xl mx-auto"
-      id="features-section"
-    >
+    <section className="py-16 px-6 max-w-screen-xl mx-auto" id="features-section">
       <div className="text-center mb-6">
-        <h2 className="text-4xl text-white font-bold mb-4 caret-transparent">
+        <h2 className="text-4xl text-white font-bold mb-4 caret-transparent heading">
           Why Choose SkillHub?
         </h2>
-        <p className="text-lg text-stone-400 caret-transparent">
-          Discover the powerful tools and features designed to elevate your
-          career and connect you with global opportunities.
+        <p className="text-lg text-stone-400 caret-transparent subheading">
+          Discover the powerful tools and features designed to elevate your career and connect you with global opportunities.
         </p>
       </div>
 
-      <div className="relative px-4 ">
+      <div className="relative px-4">
         <button
           onClick={handlePrev}
           className="absolute -left-4 top-1/2 transform -translate-y-1/2 z-0 overflow-hidden
@@ -146,65 +196,61 @@ const FeaturesSection = () => {
         </button>
 
         <div
-          className={`sm:grid grid-cols-6 grid-rows-5 gap-4  feature  bg-white/20
+          className={`sm:grid grid-cols-6 grid-rows-5 gap-4 feature bg-white/20
              transition duration-500 ease-in-out transform ${
                isTransitioning ? "blur-sm opacity-50" : "opacity-100"
              }`}
         >
-          <div className="col-span-6 flex justify-center items-center ">
-            <p className="text-stone-200 sm:text-4xl uppercase whitespace-normal">
+          <div className="col-span-6 flex justify-center items-center">
+            <p className="text-stone-200 sm:text-4xl uppercase whitespace-normal feature-title">
               {title}
             </p>
           </div>
           <div
             className="col-span-2 row-span-4 row-start-2 sm:h-60 h-40 py-4 sm:py-0
-          flex items-center justify-center"
+          flex items-center justify-center feature-icon"
           >
             <img
               src={icon}
               alt={title}
               className="object-contain sm:h-60 h-32 sm:mb-8
               drop-shadow-[1px_3px_3px_rgba(199,92,224,0.8)] 
-            transition-transform duration-500 ease-in-out transform "
-          />
+            transition-transform duration-500 ease-in-out transform"
+            />
           </div>
-          <div className="col-span-4 row-span-4 col-start-3 row-start-2  py-8 px-4 flex flex-col">
-            <span className="text-stone-300"> {description}</span>
-            <a className="text-orange-300 hover:text-orange-500 hover:underline 
+          <div
+            className="col-span-4 row-span-4 col-start-3 row-start-2 py-8 px-4 flex flex-col feature-desc"
+          >
+            <span className="text-stone-300">{description}</span>
+            <a
+              className="text-orange-300 hover:text-orange-500 hover:underline 
             after:content-['_↗'] cursor-pointer
              after:ml-1 after:transition-transform duration-500
-             hover:after:translate-x-1 hover:after:-translate-y-1" href={link}>{cta}</a>
+             hover:after:translate-x-1 hover:after:-translate-y-1"
+              href={link}
+            >
+              {cta}
+            </a>
           </div>
         </div>
 
         <button
           onClick={handleNext}
-          className="absolute -right-4 top-1/2 transform -translate-y-1/2 overflow-hidden
-            text-white p-6 rounded-full border-l"
+          className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 overflow-hidden
+           border-l text-white p-6 rounded-full"
         >
           <GrNext className="relative right-3" />
         </button>
-
-        {/* Dots Indicator */}
-        <div className="absolute -bottom-4 left-0 right-0 flex justify-center space-x-2">
-          {features.map((_, index) => (
-            <div
-              key={index}
-              className={`w-3 h-3 rounded-full ${
-                index === currentIndex ? "bg-white" : "bg-gray-500"
-              }`}
-            />
-          ))}
-        </div>
       </div>
 
-      <div className="text-center mt-8">
-        <h3 className="text-3xl font-bold mb-8 text-stone-400 caret-transparent">
+      <div className="text-center pt-12 pb-4">
+        <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r 
+        from-orange-300 to-stone-200 lower-heading">
           Ready to take your career to the next level?
-        </h3>
-        <a href="/sign-up" className="btn-secondary py-3 px-8">
-          Sign Up Now
-        </a>
+        </h2>
+        <button className="btn-primary relative mt-4 py-2 text-transparent 
+        bg-clip-text bg-gradient-to-r 
+        from-orange-300 to-stone-200">Sign Up Now</button>
       </div>
     </section>
   );
