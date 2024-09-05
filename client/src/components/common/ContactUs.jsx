@@ -1,15 +1,18 @@
 import React from "react";
 import { Banner, heroImage1 } from "../../utils";
+import { SlCalender } from "react-icons/sl";
+import { IoCallOutline } from "react-icons/io5";
+import { RiHome3Line } from "react-icons/ri";
 
 const ContactUs = () => {
   return (
     <div className="max-w-screen-xl py-16  px-8 mx-auto " id="contact-section">
       {/* Banner Section */}
       <div
-        className="sm:h-32 h-24 flex items-center bg-cover"
+        className="sm:h-32 h-24 flex items-center bg-cover opacity-30"
         style={{ backgroundImage: `url(${Banner})` }}
       >
-        <p className="sm:text-6xl text-4xl ml-5 text-white">Contact Us</p>
+        <p className="sm:text-6xl text-4xl ml-5 text-white caret-transparent opacity-100">Contact Us</p>
       </div>
 
       {/* Details and Image Section */}
@@ -18,7 +21,9 @@ const ContactUs = () => {
         <div className="lg:col-span-2 col-span-3   ">
           {/* Address Section */}
           <div className=" m-2 py-6 flex items-center border-b-2">
-            <p className="sm:text-4xl text-xl text-white w-1/3">Address</p>
+            <p className="sm:text-2xl text-xl text-white w-1/3 flex gap-2 items-center">
+            <RiHome3Line/>
+            Address</p>
             <p className="sm:text-lg text-sm text-white w-2/3 text-start">
               Guskara, West Bengal, India 713128
             </p>
@@ -26,7 +31,8 @@ const ContactUs = () => {
 
           {/* Contact Details Section */}
           <div className=" m-2 py-6 flex items-center border-b-2">
-            <p className="sm:text-4xl text-xl text-white whitespace-nowrap w-1/3">
+            <p className="sm:text-2xl gap-2 text-xl text-white whitespace-nowrap w-1/3 flex items-center">
+            <IoCallOutline/>
               Get in Touch
             </p>
             <p className="sm:text-lg text-sm text-white w-2/3 text-center md:flex-row flex flex-col">
@@ -37,7 +43,9 @@ const ContactUs = () => {
 
           {/* Hours of Operation Section */}
           <div className=" py-6 m-2 border-b-2  flex  items-center">
-            <p className="sm:text-4xl text-xl text-white w-1/3 ">Hours</p>
+            <p className="sm:text-2xl text-xl text-white w-1/3 flex gap-2 items-center">
+            <SlCalender/>
+            Hours</p>
             <div className="sm:text-md text-sm text-white  w-2/3 grid grid-cols-2 grid-rows-3 ">
               <div>Mon - Fri</div>
               <div> 10:00 AM - 6:00 PM</div>
@@ -54,22 +62,23 @@ const ContactUs = () => {
           <img
             src={heroImage1}
             alt="Contact Us"
-            className="w-full h-auto rounded-lg  group-hover:drop-shadow-[1px_3px_3px_rgba(199,87,224,0.8)] 
+            className="w-full h-auto rounded-lg 
+             group-hover:drop-shadow-[1px_3px_3px_rgba(0,0,255,0.8)]
             transition-transform duration-500 ease-in-out transform "
           />
         </div>
       </div>
 
       {/* Contact Form and Map Section */}
-      <div className="grid grid-cols-3 lg:grid-rows-1 grid-rows-2 bg-white/30">
+      <div className="grid grid-cols-3 lg:grid-rows-1 grid-rows-2 bg-slate/20">
         {/* Contact Form */}
         <div className="flex flex-col m-2 lg:col-span-2 col-span-3 lg:row-start-1">
-          <p className="text-3xl font-serif text-white py-2">Leave a Reply</p>
+          <p className="text-3xl   py-2 gotu-regular text-[#cda6b6]">Leave a Reply</p>
           <form className="space-y-2 text-center">
             {/* Full Name and Email in one line */}
             <div className="flex  text-start w-full ">
               <div className="flex flex-col  w-1/2 pr-2">
-                <label htmlFor="name" className="text-lg text-white">
+                <label htmlFor="name" className="text-lg text-[#b68b9d]">
                   Name
                 </label>
                 <input
@@ -79,7 +88,7 @@ const ContactUs = () => {
                 />
               </div>
               <div className="flex flex-col w-1/2 ">
-                <label htmlFor="email" className="text-lg text-white">
+              <label htmlFor="email" className="text-lg text-[#b68b9d]">
                   Email
                 </label>
                 <input
@@ -99,7 +108,7 @@ const ContactUs = () => {
               />
             </div>
             {/* Submit Button */}
-            <button className="btn-primary w-1/3 py-2 text-2xl ">Submit</button>
+            <button className="btn-primary text-[#818cf8] w-1/3 py-2 text-2xl ">Submit</button>
           </form>
         </div>
 

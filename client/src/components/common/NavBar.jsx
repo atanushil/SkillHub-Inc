@@ -24,10 +24,10 @@ const Navbar = () => {
 
   return (
     <nav className="max-w-screen-xl mx-auto flex items-center justify-between px-4
-     shadow-md shadow-Purple bg-slate/30 backdrop-blur-sm">
+     ">
       <div className="flex items-center">
         <img src={Logo} alt="Logo" className="w-16" />
-        <p className="text-animate font-mono  text-xl ml-2">
+        <p className="text-animate gotu-regular italic  text-2xl ml-2 mt-4">
           Skillhub Inc.
         </p>
       </div>
@@ -40,8 +40,8 @@ const Navbar = () => {
               key={i}
               className={`cursor-pointer caret-transparent ${
                 selected === nav
-                  ? "text-white border-b-2 border-white"
-                  : "nav-link border-b-animation hover:text-animate"
+                  ? "text-orange-400 border-b-2 border-white"
+                  : "hover:text-orange-300  "
               }`}
               onClick={() => handleNavClick(nav, sectionId)}
             >
@@ -57,7 +57,6 @@ const Navbar = () => {
       </div>
 
       <div className="lg:hidden flex items-center" onClick={handleDrawer}>
-        <button className="btn-secondary  text-sm py-1 caret-transparent">Sign Up</button>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -73,7 +72,7 @@ const Navbar = () => {
           />
         </svg>
         {open && (
-          <div className="absolute right-0 top-14 p-4 bg-white/70 backdrop-blur-sm w-full">
+          <div className="absolute right-0 top-14 p-4  bg-slate min-h-screen w-full z-30 ">
             <ul className="my-2">
               {NavigationLinks.map((nav, i) => {
                 const sectionId = Object.values(nav)[0];
@@ -82,8 +81,8 @@ const Navbar = () => {
                     key={i}
                     className={`py-1 cursor-pointer  ${
                       selected === nav
-                        ? "text-Blue border-b-2 border-Blue font-bold"
-                        : "nav-link border-b-animation hover:text-animate "
+                        ? "text-orange-500 border-b-2 border-white font-bold"
+                        : " text-stone-400 hover:text-orange-400 "
                     }`}
                     onClick={() => handleNavClick(nav, sectionId)}
                   >
@@ -93,8 +92,8 @@ const Navbar = () => {
               })}
             </ul>
             <div className="flex flex-col gap-4 mt-4">
-              <button className="btn-primary py-2 text-xl border-slate text-slate">Log In</button>
-              <button className="btn-secondary py-2 text-xl">Sign Up</button>
+              <button className="border rounded-lg py-2 text-xl border-stone-400 text-white">Log In</button>
+              <button className="rounded-lg py-2 text-xl text-white border-white bg-stone-600">Sign Up</button>
             </div>
           </div>
         )}

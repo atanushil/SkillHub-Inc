@@ -119,7 +119,7 @@ const FeaturesSection = () => {
     }, 500);
   };
 
-  const { icon, title, description, cta } = features[currentIndex];
+  const { icon, title, description, cta ,link} = features[currentIndex];
 
   return (
     <section
@@ -139,7 +139,7 @@ const FeaturesSection = () => {
       <div className="relative px-4 ">
         <button
           onClick={handlePrev}
-          className="absolute -left-4 top-1/2 transform -translate-y-1/2 z-20 overflow-hidden
+          className="absolute -left-4 top-1/2 transform -translate-y-1/2 z-0 overflow-hidden
            border-r text-white p-6 rounded-full"
         >
           <GrPrevious className="relative left-3" />
@@ -170,7 +170,10 @@ const FeaturesSection = () => {
           </div>
           <div className="col-span-4 row-span-4 col-start-3 row-start-2  py-8 px-4 flex flex-col">
             <span className="text-stone-300"> {description}</span>
-            <span className="text-orange-300 ">{cta}</span>
+            <a className="text-orange-300 hover:text-orange-500 hover:underline 
+            after:content-['_↗'] cursor-pointer
+             after:ml-1 after:transition-transform duration-500
+             hover:after:translate-x-1 hover:after:-translate-y-1" href={link}>{cta}</a>
           </div>
         </div>
 

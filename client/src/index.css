@@ -1,10 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@447&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
 
 @layer components {
-
-  /* Navbar css */
   .text-animate {
     @apply font-sans overflow-hidden bg-no-repeat;
     background: linear-gradient(90deg, #2957ae, #fff, #4ea1d5);
@@ -15,10 +19,7 @@
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
   }
 
-  .nav-link {
-    @apply cursor-pointer caret-transparent duration-300 drop-shadow-[1px_3px_3px_rgba(199,87,224,0.8)]
-     transition-colors ease-in-out hover:delay-200 relative;
-  }
+
 
   .btn-primary {
     @apply bg-inherit border px-4 rounded-lg transition-colors duration-300 ease-in-out
@@ -32,22 +33,29 @@
      duration-300 ease-in-out hover:border-Purple;
   }
 
-  /* Hero Section */
 
 
-  /* Auto scroll */
-  .scroll-container {
-    @apply w-full overflow-hidden whitespace-nowrap;
-  }
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 447;
+  font-style: normal;
+}
 
-  .scroll-content {
-    @apply inline-flex;
-    animation: scroll 20s linear infinite;
-  }
 
-  .scroll-item {
-    @apply w-[150px] h-16 mx-1 bg-white flex justify-center items-center text-center rounded-xl;
-  }
+.playwrite-gb {
+  font-family: "Playwrite GB J", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+  
+.gotu-regular {
+  font-family: "Gotu", sans-serif;
+
+}
+
+
 }
 
 
@@ -65,22 +73,3 @@
   }
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-80%);
-  }
-}
-
-@keyframes reverse-scroll {
-  0% {
-    transform: translateX(-80%);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}

@@ -10,17 +10,17 @@ const AboutUs = () => {
     >
       <div
         className="md:col-span-2 md:col-start-1 group
-       hover:drop-shadow-[0_3px_3px_#0891b2] text-stone-400 cursor-pointer
+       hover:drop-shadow-[0_3px_3px_#0891b2] text-stone-400 cursor-pointer bg-stone-400/10
         md:text-7xl lg:text-8xl  text-6xl mb-4 flex items-center justify-center caret-transparent"
       >
         Our Mission
       </div>
 
       <div
-        className="md:col-span-2 md:row-span-5 md:col-start-1 md:row-start-2
-        bg-slate/10 flex justify-center items-center"
+        className="md:col-span-2 md:row-span-5 md:col-start-1 md:row-start-2 bg-slate/20
+         flex justify-center items-center"
       >
-        <div className="relative group">
+        <div className="relative group ">
           <img
             src={Logo}
             alt="logo"
@@ -32,22 +32,30 @@ const AboutUs = () => {
 
       <div
         className="md:col-span-2 md:row-span-7 md:col-start-3  
-         lg:px-0 sm:px-8 py-4  bg-slate/20 md:grid md:grid-cols-1 md:grid-rows-7"
+         lg:px-0 sm:px-8 py-4   md:grid md:grid-cols-1 md:grid-rows-7 bg-slate/20"
       >
         <div className="md:row-span-6 md:row-start-2 sm:px-4 px-2 text-stone-300 h-full">
           <p className="sm:text-xl text-sm caret-transparent">
-            At <span className="text-animate">SkillHub</span>, our mission is to
-            revolutionize the way developers present their skills and connect
-            with job opportunities across the globe. We are dedicated to
-            providing a platform that not only highlights your unique talents
-            but also verifies them through advanced blockchain technology,
-            ensuring that your credentials are both authentic and credible. By
-            bridging the gap between exceptional talent and top-notch
-            opportunities, we strive to empower developers to achieve their
-            career goals, accelerate their growth, and thrive in a competitive
-            job market. Our commitment is to foster a supportive community where
-            professionals can unlock their full potential and secure their ideal
-            roles.
+            At
+            <span
+              className="text-lg relative 
+             hover:text-orange-500  after:content-['_↗_'] 
+             after:ml-1 after:transition-transform duration-500
+             hover:after:translate-x-1 hover:after:-translate-y-1"
+            >
+              <a href="/home-section" className="gotu-regular font-bold italic"> SkillHub</a>
+            </span>
+            our mission is to revolutionize the way developers present their
+            skills and connect with job opportunities across the globe. We are
+            dedicated to providing a platform that not only highlights your
+            unique talents but also verifies them through advanced blockchain
+            technology, ensuring that your credentials are both authentic and
+            credible. By bridging the gap between exceptional talent and
+            top-notch opportunities, we strive to empower developers to achieve
+            their career goals, accelerate their growth, and thrive in a
+            competitive job market. Our commitment is to foster a supportive
+            community where professionals can unlock their full potential and
+            secure their ideal roles.
           </p>
           <br />
           <a href="/about-us">

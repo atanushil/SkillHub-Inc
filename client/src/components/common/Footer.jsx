@@ -11,7 +11,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-r from-gray-900 via-gray-800  to-gray-900 text-white py-8">
+    <footer className=" max-w-screen-xl mx-auto
+      to-gray-900 text-white py-8">
       <div className="container mx-auto flex flex-col md:flex-row items-center 
        justify-between py-2">
         
