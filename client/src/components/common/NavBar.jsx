@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Logo } from "../../utils";
 import { NavigationLinks } from "../../constants";
 
-const Navbar = () => {
+const Navbar = ({ activeSectionId }) => {
   const [selected, setSelected] = useState(NavigationLinks[0]);
   const [open, setOpen] = useState(false);
 
@@ -22,12 +22,20 @@ const Navbar = () => {
     handleScrollDown(sectionId);
   };
 
+  useEffect(() => {
+    if (activeSectionId) {
+      const activeNav = NavigationLinks.find(nav => Object.values(nav)[0] === activeSectionId);
+      if (activeNav) {
+        setSelected(activeNav);
+      }
+    }
+  }, [activeSectionId]);
+
   return (
-    <nav className="max-w-screen-xl mx-auto flex items-center justify-between px-4
-     ">
+    <nav className="max-w-screen-xl mx-auto flex items-center justify-between px-4">
       <div className="flex items-center">
         <img src={Logo} alt="Logo" className="w-16" />
-        <p className="text-animate gotu-regular italic  text-2xl ml-2 mt-4">
+        <p className="text-animate gotu-regular italic text-2xl ml-2 mt-4">
           Skillhub Inc.
         </p>
       </div>
@@ -41,7 +49,7 @@ const Navbar = () => {
               className={`cursor-pointer caret-transparent ${
                 selected === nav
                   ? "text-orange-400 border-b-2 border-white"
-                  : "hover:text-orange-300  "
+                  : "hover:text-orange-300"
               }`}
               onClick={() => handleNavClick(nav, sectionId)}
             >
@@ -63,7 +71,7 @@ const Navbar = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="h-10 w-10  text-white m-2"
+          className="h-10 w-10 text-white m-2"
         >
           <path
             strokeLinecap="round"
@@ -72,17 +80,17 @@ const Navbar = () => {
           />
         </svg>
         {open && (
-          <div className="absolute right-0 top-14 p-4  bg-slate min-h-screen w-full z-30 ">
+          <div className="absolute right-0 top-14 p-4 bg-slate min-h-screen w-full z-30">
             <ul className="my-2">
               {NavigationLinks.map((nav, i) => {
                 const sectionId = Object.values(nav)[0];
                 return (
                   <li
                     key={i}
-                    className={`py-1 cursor-pointer  ${
+                    className={`py-1 cursor-pointer ${
                       selected === nav
                         ? "text-orange-500 border-b-2 border-white font-bold"
-                        : " text-stone-400 hover:text-orange-400 "
+                        : "text-stone-400 hover:text-orange-400"
                     }`}
                     onClick={() => handleNavClick(nav, sectionId)}
                   >

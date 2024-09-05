@@ -1,14 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@447&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap');
+/* Google Fonts */
 
+/* Font Customizations */
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+  .gotu-regular {
+    font-family: "Gotu", sans-serif;
+  }
+}
 
+/* Component Customizations */
 @layer components {
+
+  /* Text Animation */
   .text-animate {
     @apply font-sans overflow-hidden bg-no-repeat;
     background: linear-gradient(90deg, #2957ae, #fff, #4ea1d5);
@@ -19,57 +27,35 @@
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
   }
 
-
-
+  /* Primary Button */
   .btn-primary {
-    @apply bg-inherit border px-4 rounded-lg transition-colors duration-300 ease-in-out
-    group-hover:border-Purple group-hover:bg-slate group-hover:delay-75
-     hover:border-Purple hover:bg-slate hover:delay-75 text-Teal hover:text-white;
+    @apply bg-inherit border px-4 rounded-lg transition-colors duration-300 ease-in-out;
+    @apply group-hover:border-Purple group-hover:bg-slate group-hover:delay-75;
+    @apply hover:border-Purple hover:bg-slate hover:delay-75;
+    @apply text-Teal hover:text-white;
+    @apply focus:outline-none focus:ring-2 focus:ring-Teal;
   }
 
+  /* Secondary Button */
   .btn-secondary {
-    @apply text-stone-400 hover:text-white font-sans px-4 
-    py-1 rounded-lg border border-transparent bg-slate transition-colors group-hover:border-Purple
-     duration-300 ease-in-out hover:border-Purple;
-  }
-
-
-
-.dancing-script {
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  font-weight: 447;
-  font-style: normal;
-}
-
-
-.playwrite-gb {
-  font-family: "Playwrite GB J", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-  
-.gotu-regular {
-  font-family: "Gotu", sans-serif;
-
-}
-
-
-}
-
-
-
-
-
-
-@keyframes animate {
-  0% {
-    background-position: -500%;
-  }
-
-  100% {
-    background-position: 500%;
+    @apply text-stone-400 hover:text-white font-sans px-4 py-1 rounded-lg;
+    @apply border border-transparent bg-slate transition-colors group-hover:border-Purple;
+    @apply duration-300 ease-in-out hover:border-Purple;
+    @apply focus:outline-none focus:ring-2 focus:ring-Purple;
   }
 }
 
+/* Utilities */
+@layer utilities {
+
+  /* Keyframe Animation for Text Gradient */
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+
+    100% {
+      background-position: 500%;
+    }
+  }
+}
