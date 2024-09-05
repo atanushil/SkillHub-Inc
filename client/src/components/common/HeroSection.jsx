@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { heroImageFirst } from "../../utils"; // Replace with your actual image path
 
 const HeroSection = ({}) => {
+  const [count, setCount] = useState(0);
+  const targetCount = 10000;
+
+  useEffect(() => {
+    const increment = targetCount / 100; // Change this number to control the speed of the increment
+    const timer = setInterval(() => {
+      setCount((prevCount) => {
+        if (prevCount < targetCount) {
+          return Math.ceil(prevCount + increment); // Increment the count smoothly
+        } else {
+          clearInterval(timer);
+          return targetCount;
+        }
+      });
+    }, 50); // Adjust the interval speed
+
+    return () => clearInterval(timer);
+  }, [targetCount]);
+
   const handleSignUp = () => {
     // Redirect to the sign-up page or handle sign-up logic
   };
@@ -17,11 +36,11 @@ const HeroSection = ({}) => {
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
         {/* Headline and Subheadline */}
         <div className="text-center lg:text-left lg:max-w-lg relative xl:bottom-10">
-          <h1 className="text-4xl lg:text-6xl lg:leading-tight 2xl:leading-normal  font-bold mb-4">
+          <h1 className="text-4xl lg:text-6xl lg:leading-tight 2xl:leading-normal caret-transparent font-bold mb-4">
             Empower Your Career with a Verified Portfolio.
           </h1>
-          <p className="lg:text-3xl text-xl text-orange-400 mb-4">Trusted by 10,000+ developers.</p>
-          <p className="text-lg lg:text-xl mb-8 text-stone-400">
+          <p className="lg:text-3xl text-xl text-orange-400 mb-4 caret-transparent"> Trusted by {count.toLocaleString()}+ developers.</p>
+          <p className="text-lg lg:text-xl mb-8 text-stone-400 caret-transparent">
             Showcase your skills, find job matches, and secure your future with
             SkillHub.
           </p>

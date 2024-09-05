@@ -24,7 +24,9 @@ const Navbar = ({ activeSectionId }) => {
 
   useEffect(() => {
     if (activeSectionId) {
-      const activeNav = NavigationLinks.find(nav => Object.values(nav)[0] === activeSectionId);
+      const activeNav = NavigationLinks.find(
+        (nav) => Object.values(nav)[0] === activeSectionId
+      );
       if (activeNav) {
         setSelected(activeNav);
       }
@@ -33,7 +35,10 @@ const Navbar = ({ activeSectionId }) => {
 
   return (
     <nav className="max-w-screen-xl mx-auto flex items-center justify-between px-4">
-      <div className="flex items-center">
+      <div
+        className="flex items-center caret-transparent cursor-pointer"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
         <img src={Logo} alt="Logo" className="w-16" />
         <p className="text-animate gotu-regular italic text-2xl ml-2 mt-4">
           Skillhub Inc.
@@ -100,8 +105,12 @@ const Navbar = ({ activeSectionId }) => {
               })}
             </ul>
             <div className="flex flex-col gap-4 mt-4">
-              <button className="border rounded-lg py-2 text-xl border-stone-400 text-white">Log In</button>
-              <button className="rounded-lg py-2 text-xl text-white border-white bg-stone-600">Sign Up</button>
+              <button className="border rounded-lg py-2 text-xl border-stone-400 text-white">
+                Log In
+              </button>
+              <button className="rounded-lg py-2 text-xl text-white border-white bg-stone-600">
+                Sign Up
+              </button>
             </div>
           </div>
         )}
