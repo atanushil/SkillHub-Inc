@@ -17,12 +17,12 @@ const Footer = () => {
        justify-between py-2">
         
         <div className="text-center md:text-left mb-6 md:mb-0">
-          <h3 className="text-xl font-semibold mb-2">SkillHub Inc.</h3>
-          <p className="mb-2">Empowering developers worldwide.</p>
-          <p>Unlock your potential.</p>
+          <h3 className="text-xl font-semibold mb-2 text-gradient-heading">SkillHub Inc.</h3>
+          <p className="mb-2 text-gradient-sub-heading">Empowering developers worldwide.</p>
+          <p className="text-orange-200">Unlock your potential.</p>
         </div>
 
-        <div className="flex space-x-4 justify-center">
+        <div className="flex space-x-4 justify-center text-gradient-sub-heading">
           {NavigationLinks.map((nav, i) => {
             const sectionId = Object.values(nav)[0];
             return (
@@ -38,27 +38,28 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-2 border-t border-gray-700">
+      <div className="container mx-auto flex flex-col md:flex-row max-w-screen-lg 
+      items-center justify-between py-2 border-t border-gray-700">
         
         {/* Follow Us Section */}
-        <div className="flex space-x-6 justify-center md:justify-start mb-6 md:mb-0">
-          <a href="https://linkedin.com/company/skillhub" className="text-gray-400 hover:text-blue-700 transition-colors duration-300">
+        <div className="flex space-x-6 justify-center md:justify-start mb-6 md:mb-0 ">
+          <a href="https://www.linkedin.com/in/webdev-atanushil/" className="text-gray-400 hover:text-blue-700 transition-colors duration-300">
             <FaLinkedin size={24} />
           </a>
-          <a href="https://twitter.com/skillhub" className="text-gray-400 hover:text-blue-600
+          <a href="https://x.com/atanushil358" className="text-gray-400 hover:text-blue-600
             transition-colors duration-300">
             <FaTwitter size={24} />
           </a>
-          <a href="https://facebook.com/skillhub" className="text-gray-400 hover:text-stone-500  transition-colors duration-300">
+          <a href="https://github.com/atanushil" className="text-gray-400 hover:text-stone-500  transition-colors duration-300">
             <FaGithub size={24} />
           </a>
-          <a href="https://instagram.com/skillhub" className="text-gray-400 hover:text-pink-500 transition-colors duration-300">
+          <a href="https://instagram.com/atanu.notfound" className="text-gray-400 hover:text-pink-500 transition-colors duration-300">
             <FaInstagram size={24} />
           </a>
         </div>
 
         {/* Privacy Policy Section */}
-        <div className="flex space-x-4 justify-center">
+        <div className="flex space-x-4 justify-center text-gradient-sub-heading">
           {["Privacy Policy", "Terms & Conditions", "Cookie Policy"].map((policy) => (
             <a key={policy} href="/" className="hover:text-blue-500 transition-colors duration-300">
               {policy}

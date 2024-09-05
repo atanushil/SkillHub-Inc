@@ -59,10 +59,10 @@ const Pricing = () => {
   return (
     <section id="pricing-section" className="py-16 max-w-screen-xl mx-auto">
       <div className="px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-extrabold text-stone-200">
+        <h2 className="text-3xl font-extrabold  text-gradient-heading">
           Our Pricing Plans
         </h2>
-        <p className="mt-4 text-lg text-stone-400">
+        <p className="mt-4 text-lg   text-gradient-sub-heading">
           Choose the plan that best fits your needs and start your journey with
           SkillHub.
         </p>

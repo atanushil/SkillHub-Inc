@@ -178,10 +178,15 @@ const FeaturesSection = () => {
   return (
     <section className="py-16 px-6 max-w-screen-xl mx-auto" id="features-section">
       <div className="text-center mb-6">
-        <h2 className="text-4xl text-white font-bold mb-4 caret-transparent heading">
+        <h2 className="text-4xl  font-bold mb-4 caret-transparent
+         heading  text-transparent 
+        bg-clip-text bg-gradient-to-r 
+        from-orange-400 to-stone-200">
           Why Choose SkillHub?
         </h2>
-        <p className="text-lg text-stone-400 caret-transparent subheading">
+        <p className="text-lg text-stone-400 caret-transparent subheading text-transparent 
+        bg-clip-text bg-gradient-to-r 
+        from-purple-400 to-stone-200">
           Discover the powerful tools and features designed to elevate your career and connect you with global opportunities.
         </p>
       </div>
@@ -202,7 +207,8 @@ const FeaturesSection = () => {
              }`}
         >
           <div className="col-span-6 flex justify-center items-center">
-            <p className="text-stone-200 sm:text-4xl uppercase whitespace-normal feature-title">
+            <p className="text-stone-200 sm:text-4xl text-sm text-center
+             uppercase whitespace-normal feature-title">
               {title}
             </p>
           </div>
@@ -219,7 +225,8 @@ const FeaturesSection = () => {
             />
           </div>
           <div
-            className="col-span-4 row-span-4 col-start-3 row-start-2 py-8 px-4 flex flex-col feature-desc"
+            className="col-span-4 row-span-4 col-start-3 row-start-2 py-8 px-4 flex  
+            flex-col feature-desc"
           >
             <span className="text-stone-300">{description}</span>
             <a
@@ -236,7 +243,7 @@ const FeaturesSection = () => {
 
         <button
           onClick={handleNext}
-          className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 overflow-hidden
+          className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-0 overflow-hidden
            border-l text-white p-6 rounded-full"
         >
           <GrNext className="relative right-3" />

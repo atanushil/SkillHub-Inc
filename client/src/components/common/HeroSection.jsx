@@ -76,13 +76,14 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
         {/* Headline and Subheadline */}
         <div className="text-center lg:text-left lg:max-w-lg relative xl:bottom-10 hero-text">
-          <h1 className="text-4xl lg:text-6xl lg:leading-tight 2xl:leading-normal caret-transparent font-bold mb-4 hero-text">
+          <h1 className="text-4xl lg:text-6xl lg:leading-tight text-gradient-heading
+           2xl:leading-normal caret-transparent font-bold mb-4 hero-text">
             Empower Your Career with a Verified Portfolio.
           </h1>
           <p className="lg:text-3xl text-xl text-orange-400 mb-4 caret-transparent hero-text">
             Trusted by {count.toLocaleString()}+ developers.
           </p>
-          <p className="text-lg lg:text-xl mb-8 text-stone-400 caret-transparent hero-text">
+          <p className="text-lg lg:text-xl mb-8 text-gradient-sub-heading caret-transparent hero-text">
             Showcase your skills, find job matches, and secure your future with SkillHub.
           </p>
           {/* CTA Buttons */}

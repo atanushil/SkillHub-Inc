@@ -51,10 +51,10 @@ const HowItWorks = () => {
   return (
     <section id="work-section" className="py-16 max-w-screen-xl mx-auto ">
       <div className="px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-extrabold text-stone-200">
+        <h2 className="text-3xl font-extrabold text-gradient-heading">
           Getting Started with SkillHub
         </h2>
-        <p className="mt-4 text-lg text-gray-400">
+        <p className="mt-4 text-lg text-gray-400 text-gradient-sub-heading">
           Follow these simple steps to showcase your skills and connect with
           global job opportunities.
         </p>
@@ -62,17 +62,18 @@ const HowItWorks = () => {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="group p-6 bg-white/20 backdrop-blur-sm shadow-lg rounded-lg cursor-pointer
+              className="group p-6 bg-white/50 backdrop-blur-sm shadow-lg rounded-lg cursor-pointer
                transition-transform duration-300 hover:bg-white/50
                hover:scale-105 hover:shadow-2xl hover:relative hover:shadow-Purple"
             >
-              <div className="relative z-10 flex text-stone-500 group-hover:text-teal-300 text-4xl items-center justify-center mb-4">
+              <div className="relative z-10 flex text-stone-500
+               group-hover:text-orange-400 text-4xl items-center justify-center mb-4">
                 {step.icon}
               </div>
-              <h3 className="text-xl font-semibold text-stone-500 group-hover:text-teal-300">
+              <h3 className="text-xl font-semibold text-stone-500 group-hover:text-gradient-heading">
                 {step.title}
               </h3>
-              <p className="mt-2 text-stone-500 group-hover:text-slate">{step.description}</p>
+              <p className="mt-2 text-stone-500 group-hover:text-gradient-heading">{step.description}</p>
             </div>
           ))}
         </div>

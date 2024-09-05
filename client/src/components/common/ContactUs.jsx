@@ -9,10 +9,10 @@ const ContactUs = () => {
     <div className="max-w-screen-xl py-16  px-8 mx-auto " id="contact-section">
       {/* Banner Section */}
       <div
-        className="sm:h-32 h-24 flex items-center bg-cover opacity-30"
+        className="sm:h-32 h-24 flex items-center bg-cover "
         style={{ backgroundImage: `url(${Banner})` }}
       >
-        <p className="sm:text-6xl text-4xl ml-5 text-white caret-transparent opacity-100">Contact Us</p>
+        <p className="sm:text-6xl text-4xl ml-5  text-gradient-heading caret-transparent opacity-100">Contact Us</p>
       </div>
 
       {/* Details and Image Section */}
@@ -21,21 +21,21 @@ const ContactUs = () => {
         <div className="lg:col-span-2 col-span-3   ">
           {/* Address Section */}
           <div className=" m-2 py-6 flex items-center border-b-2">
-            <p className="sm:text-2xl text-xl text-white w-1/3 flex gap-2 items-center">
-            <RiHome3Line/>
+            <p className="sm:text-2xl text-xl  w-1/3 flex gap-2 items-center  text-gradient-heading">
+            <RiHome3Line className="text-orange-400"/>
             Address</p>
-            <p className="sm:text-lg text-sm text-white w-2/3 text-start">
+            <p className="sm:text-lg text-sm  w-2/3 text-center sm:text-start  text-gradient-sub-heading">
               Guskara, West Bengal, India 713128
             </p>
           </div>
 
           {/* Contact Details Section */}
           <div className=" m-2 py-6 flex items-center border-b-2">
-            <p className="sm:text-2xl gap-2 text-xl text-white whitespace-nowrap w-1/3 flex items-center">
-            <IoCallOutline/>
+            <p className="sm:text-2xl gap-2 text-xl  text-gradient-heading whitespace-nowrap w-1/3 flex items-center">
+            <IoCallOutline className="text-orange-400"/>
               Get in Touch
             </p>
-            <p className="sm:text-lg text-sm text-white w-2/3 text-center md:flex-row flex flex-col">
+            <p className="sm:text-lg text-sm  text-gradient-sub-heading w-2/3 text-center md:flex-row flex flex-col">
               <span className="mr-4">+91 9832118794</span>
               <span>atanushil358@gmail.com</span>
             </p>
@@ -43,10 +43,10 @@ const ContactUs = () => {
 
           {/* Hours of Operation Section */}
           <div className=" py-6 m-2 border-b-2  flex  items-center">
-            <p className="sm:text-2xl text-xl text-white w-1/3 flex gap-2 items-center">
-            <SlCalender/>
+            <p className="sm:text-2xl text-xl  w-1/3 flex gap-2 items-center  text-gradient-heading">
+            <SlCalender className="text-orange-400"/>
             Hours</p>
-            <div className="sm:text-md text-sm text-white  w-2/3 grid grid-cols-2 grid-rows-3 ">
+            <div className="sm:text-md text-sm  text-gradient-sub-heading  w-2/3 grid grid-cols-2 grid-rows-3 ">
               <div>Mon - Fri</div>
               <div> 10:00 AM - 6:00 PM</div>
               <div>Sat</div>
@@ -73,12 +73,12 @@ const ContactUs = () => {
       <div className="grid grid-cols-3 lg:grid-rows-1 grid-rows-2 bg-slate/20">
         {/* Contact Form */}
         <div className="flex flex-col m-2 lg:col-span-2 col-span-3 lg:row-start-1">
-          <p className="text-3xl   py-2 gotu-regular text-[#cda6b6]">Leave a Reply</p>
+          <p className="text-3xl   py-2 gotu-regular text-gradient-heading">Leave a Reply</p>
           <form className="space-y-2 text-center">
             {/* Full Name and Email in one line */}
             <div className="flex  text-start w-full ">
               <div className="flex flex-col  w-1/2 pr-2">
-                <label htmlFor="name" className="text-lg text-[#b68b9d]">
+                <label htmlFor="name" className="text-lg text-gradient-heading">
                   Name
                 </label>
                 <input
@@ -88,7 +88,7 @@ const ContactUs = () => {
                 />
               </div>
               <div className="flex flex-col w-1/2 ">
-              <label htmlFor="email" className="text-lg text-[#b68b9d]">
+              <label htmlFor="email" className="text-lg text-gradient-heading">
                   Email
                 </label>
                 <input
@@ -108,7 +108,7 @@ const ContactUs = () => {
               />
             </div>
             {/* Submit Button */}
-            <button className="btn-primary text-[#818cf8] w-1/3 py-2 text-2xl ">Submit</button>
+            <button className="btn-primary text-gradient-heading  w-1/3 py-2 text-2xl ">Submit</button>
           </form>
         </div>
 

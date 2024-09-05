@@ -10,7 +10,7 @@ const AboutUs = () => {
     >
       <div
         className="md:col-span-2 md:col-start-1 group
-       hover:drop-shadow-[0_3px_3px_#0891b2] text-stone-400 cursor-pointer bg-stone-400/10
+         text-gradient-heading cursor-pointer bg-stone-400/10
         md:text-7xl lg:text-8xl  text-6xl mb-4 flex items-center justify-center caret-transparent"
       >
         Our Mission
@@ -35,10 +35,10 @@ const AboutUs = () => {
          lg:px-0 sm:px-8 py-4   md:grid md:grid-cols-1 md:grid-rows-7 bg-slate/20"
       >
         <div className="md:row-span-6 md:row-start-2 sm:px-4 px-2 text-stone-300 h-full">
-          <p className="sm:text-xl text-sm caret-transparent">
+          <p className="sm:text-xl text-sm caret-transparent  text-gradient-sub-heading">
             At
             <span
-              className="text-lg relative 
+              className="text-lg relative text-purple-200
              hover:text-orange-500  after:content-['_↗_'] 
              after:ml-1 after:transition-transform duration-500
              hover:after:translate-x-1 hover:after:-translate-y-1"
@@ -60,7 +60,7 @@ const AboutUs = () => {
           <br />
           <a href="/about-us">
             <span
-              className="lg:top-6 top-0 text-xl relative font-medium 
+              className="lg:top-6 top-0 text-xl relative font-medium   text-gradient-heading
              hover:text-orange-500 hover:underline after:content-['_↗'] 
              after:ml-1 after:transition-transform duration-500
              hover:after:translate-x-1 hover:after:-translate-y-1"

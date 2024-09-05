@@ -43,19 +43,27 @@
     @apply duration-300 ease-in-out hover:border-Purple;
     @apply focus:outline-none focus:ring-2 focus:ring-Purple;
   }
-}
 
-/* Utilities */
-@layer utilities {
+  .text-gradient-heading {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-stone-200;
+  }
+  .text-gradient-sub-heading{
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-stone-200;
 
-  /* Keyframe Animation for Text Gradient */
-  @keyframes animate {
-    0% {
-      background-position: -500%;
-    }
-
-    100% {
-      background-position: 500%;
-    }
   }
 }
+
+  /* Utilities */
+  @layer utilities {
+
+    /* Keyframe Animation for Text Gradient */
+    @keyframes animate {
+      0% {
+        background-position: -500%;
+      }
+
+      100% {
+        background-position: 500%;
+      }
+    }
+  }
