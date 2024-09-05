@@ -41,7 +41,7 @@ const Navbar = ({ activeSectionId }) => {
       >
         <img src={Logo} alt="Logo" className="w-16" />
         <p className="text-animate gotu-regular italic text-2xl ml-2 mt-4">
-          Skillhub Inc.
+          Skiller Hub 
         </p>
       </div>
 

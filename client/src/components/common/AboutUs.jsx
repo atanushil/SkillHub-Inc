@@ -43,7 +43,7 @@ const AboutUs = () => {
              after:ml-1 after:transition-transform duration-500
              hover:after:translate-x-1 hover:after:-translate-y-1"
             >
-              <a href="/home-section" className="gotu-regular font-bold italic"> SkillHub</a>
+              <a href="/home-section" className="gotu-regular font-bold italic"> Skiller Hub</a>
             </span>
             our mission is to revolutionize the way developers present their
             skills and connect with job opportunities across the globe. We are

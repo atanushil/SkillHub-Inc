@@ -64,7 +64,7 @@ const Pricing = () => {
         </h2>
         <p className="mt-4 text-lg   text-gradient-sub-heading">
           Choose the plan that best fits your needs and start your journey with
-          SkillHub.
+          Skiller Hub.
         </p>
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
           {plans.map((plan, index) => (

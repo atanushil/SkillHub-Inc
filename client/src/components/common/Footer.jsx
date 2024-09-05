@@ -17,7 +17,7 @@ const Footer = () => {
        justify-between py-2">
         
         <div className="text-center md:text-left mb-6 md:mb-0">
-          <h3 className="text-xl font-semibold mb-2 text-gradient-heading">SkillHub Inc.</h3>
+          <h3 className="text-xl font-semibold mb-2 text-gradient-heading">Skiller Hub Inc.</h3>
           <p className="mb-2 text-gradient-sub-heading">Empowering developers worldwide.</p>
           <p className="text-orange-200">Unlock your potential.</p>
         </div>
@@ -69,7 +69,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center border-t border-gray-700 py-2">
-        <p className="text-sm">&copy; 2024 SkillHub Inc. All rights reserved.</p>
+        <p className="text-sm">&copy; 2024 Skiller Hub Inc. All rights reserved.</p>
       </div>
     </footer>
   );

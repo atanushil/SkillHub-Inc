@@ -84,7 +84,7 @@ const HeroSection = () => {
             Trusted by {count.toLocaleString()}+ developers.
           </p>
           <p className="text-lg lg:text-xl mb-8 text-gradient-sub-heading caret-transparent hero-text">
-            Showcase your skills, find job matches, and secure your future with SkillHub.
+            Showcase your skills, find job matches, and secure your future with Skiller Hub.
           </p>
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4 hero-text">

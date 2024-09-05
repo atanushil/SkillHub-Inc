@@ -52,7 +52,7 @@ const HowItWorks = () => {
     <section id="work-section" className="py-16 max-w-screen-xl mx-auto ">
       <div className="px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-extrabold text-gradient-heading">
-          Getting Started with SkillHub
+          Getting Started with Skiller Hub
         </h2>
         <p className="mt-4 text-lg text-gray-400 text-gradient-sub-heading">
           Follow these simple steps to showcase your skills and connect with

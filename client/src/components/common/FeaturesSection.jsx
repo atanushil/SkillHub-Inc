@@ -182,7 +182,7 @@ const FeaturesSection = () => {
          heading  text-transparent 
         bg-clip-text bg-gradient-to-r 
         from-orange-400 to-stone-200">
-          Why Choose SkillHub?
+          Why Choose Skiller Hub?
         </h2>
         <p className="text-lg text-stone-400 caret-transparent subheading text-transparent 
         bg-clip-text bg-gradient-to-r 
