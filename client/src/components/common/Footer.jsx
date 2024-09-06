@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="container mx-auto flex flex-col md:flex-row max-w-screen-lg 
+      <div className="container mx-auto flex flex-col md:flex-row max-w-screen-xl
       items-center justify-between py-2 border-t border-gray-700">
         
         {/* Follow Us Section */}
